@@ -1,1 +1,3 @@
-console.log("test");
+export function functionWithoutReturnType() {
+  console.log("test");
+}

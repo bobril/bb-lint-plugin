@@ -11,7 +11,7 @@ module.exports = {
             jsx: true
         }
     },
-    plugins: ["@typescript-eslint", "@typescript-eslint/tslint"],
+    plugins: ["@typescript-eslint"],
     rules: {
         "@typescript-eslint/class-name-casing": "warn",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -29,6 +29,7 @@ module.exports = {
         "@typescript-eslint/no-require-imports": "off",
         "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/explicit-function-return-type": "warn",
         camelcase: "warn",
         curly: "warn",
         "dot-notation": "off",
@@ -85,15 +86,6 @@ module.exports = {
         "no-var": "warn",
         "prefer-const": "warn",
         radix: "warn",
-        "spaced-comment": "warn",
-        "@typescript-eslint/tslint/config": [
-            "error",
-            {
-                rules: {
-                    "jsdoc-format": true,
-                    typedef: [true, "call-signature", "property-declaration"]
-                }
-            }
-        ]
+        "spaced-comment": "warn"
     }
 };

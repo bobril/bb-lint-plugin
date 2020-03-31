@@ -11,9 +11,7 @@
         "typescript": "*",
         "eslint": "*",
         "@typescript-eslint/parser": "*",
-        "@typescript-eslint/eslint-plugin": "*",
-        "@typescript-eslint/eslint-plugin-tslint": "*",
-        "tslint": "*"
+        "@typescript-eslint/eslint-plugin": "*"
     },
     "repository": {
         "type": "git",
