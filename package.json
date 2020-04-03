@@ -1,26 +1,31 @@
 {
-    "name": "eslint-config-bobril",
-    "version": "1.0.0",
-    "description": "Bobril-build plugin for ESLint",
-    "main": "index.js",
-    "scripts": {
-        "lint": "eslint",
-        "test": "eslint ./test/test.ts"
-    },
-    "devDependencies": {
-        "typescript": "*",
-        "eslint": "*",
-        "@typescript-eslint/parser": "*",
-        "@typescript-eslint/eslint-plugin": "*"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bobril/bb-lint-plugin.git"
-    },
-    "author": "o-su",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/bobril/bb-lint-plugin/issues"
-    },
-    "homepage": "https://github.com/bobril/bb-lint-plugin#readme"
+  "name": "eslint-config-bobril",
+  "version": "1.0.0",
+  "description": "Bobril-build plugin for ESLint",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "test": "eslint ./test/test.ts"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "eslint": "*",
+    "@typescript-eslint/parser": "*",
+    "@typescript-eslint/eslint-plugin": "*"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobril/bb-lint-plugin.git"
+  },
+  "author": "o-su",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bobril/bb-lint-plugin/issues"
+  },
+  "homepage": "https://github.com/bobril/bb-lint-plugin#readme"
 }
