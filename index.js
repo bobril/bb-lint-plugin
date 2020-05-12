@@ -85,6 +85,6 @@ module.exports = {
         "no-var": "warn",
         "prefer-const": "warn",
         radix: "warn",
-        "spaced-comment": "warn",
+        "spaced-comment": ["warn", "always", { "markers": ["/"] }],
     },
 };
