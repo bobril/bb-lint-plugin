@@ -13,8 +13,42 @@ module.exports = {
     },
     plugins: ["@typescript-eslint"],
     rules: {
-        "@typescript-eslint/class-name-casing": "warn",
-        "@typescript-eslint/interface-name-prefix": ["warn", "always"],
+        "@typescript-eslint/naming-convention": [
+            "warn",
+            {
+                selector: "default",
+                format: ["camelCase"],
+            },
+            {
+                selector: "variable",
+                modifiers: ["const", "global"],
+                format: ["camelCase", "PascalCase"], // allow PascalCase for component names
+            },
+            {
+                selector: "parameter",
+                format: ["camelCase"],
+                leadingUnderscore: "allow",
+            },
+            {
+                selector: "memberLike",
+                modifiers: ["private"],
+                format: ["camelCase"],
+                leadingUnderscore: "allow",
+            },
+            {
+                selector: "enumMember",
+                format: ["PascalCase"],
+            },
+            {
+                selector: "typeLike",
+                format: ["PascalCase"],
+            },
+            {
+                selector: "interface",
+                format: ["PascalCase"],
+                prefix: ["I"],
+            },
+        ],
         "@typescript-eslint/member-ordering": "warn",
         "@typescript-eslint/no-empty-function": "warn",
         "@typescript-eslint/no-explicit-any": "warn",
@@ -29,7 +63,6 @@ module.exports = {
                 allowExpressions: true,
             },
         ],
-        camelcase: "warn",
         curly: "warn",
         "dot-notation": "off",
         "eol-last": "off",
@@ -72,8 +105,10 @@ module.exports = {
         "no-eval": "warn",
         "no-fallthrough": "warn",
         "no-new-wrappers": "warn",
-        "no-redeclare": "warn",
-        "no-shadow": [
+        "no-redeclare": "off", // note you must disable the base rule as it can report incorrect errors (e.g. on multi-signature functions)
+        "@typescript-eslint/no-redeclare": ["error"],
+        "no-shadow": "off", // note you must disable the base rule as it can report incorrect errors (e.g. on enums)
+        "@typescript-eslint/no-shadow": [
             "warn",
             {
                 hoist: "all",
@@ -85,6 +120,6 @@ module.exports = {
         "no-var": "warn",
         "prefer-const": "warn",
         radix: "warn",
-        "spaced-comment": ["warn", "always", { "markers": ["/"] }],
+        "spaced-comment": ["warn", "always", { markers: ["/"] }],
     },
 };
